@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ReviewKit_Example' do
+  pod 'ReviewKit', :path => '../'
+
+  target 'ReviewKit_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+  end
+end
