@@ -20,6 +20,12 @@ it, simply add the following line to your Podfile:
 pod 'ReviewKit'
 ```
 
+## Best Practices
+1. [Human Interface Guidelines - Ratings and Reviews](https://developer.apple.com/design/human-interface-guidelines/ios/system-capabilities/ratings-and-reviews/)
+2. [Sample Code - Requesting App Store Reviews](https://developer.apple.com/documentation/storekit/skstorereviewcontroller/requesting_app_store_reviews)
+
+3. [SKStoreReviewController](https://developer.apple.com/documentation/storekit/skstorereviewcontroller/2851536-requestreview)
+
 ## Author
 
 ajithrnayak@icloud.com, ajithrnayak@icloud.com
