@@ -21,7 +21,7 @@ class ReviewManagerTests: XCTestCase {
         let ruleType = RequestReviewRuleType.appLaunches
         reviewManager.resetOccurences(for: ruleType)
         // when
-        reviewManager.incrementOccurence(for: ruleType)
+        reviewManager.incrementOccurrence(for: ruleType)
         // then
         let count = UserDefaults.standard.value(forKey: ruleType.key) as? Int
         XCTAssertNotNil(count)
@@ -35,7 +35,7 @@ class ReviewManagerTests: XCTestCase {
         reviewManager.resetOccurences(for: ruleType)
         // when
         for _ in 1...4 {
-            reviewManager.incrementOccurence(for: ruleType)
+            reviewManager.incrementOccurrence(for: ruleType)
         }
         // then
         let count = UserDefaults.standard.value(forKey: ruleType.key) as? Int
@@ -50,7 +50,7 @@ class ReviewManagerTests: XCTestCase {
         reviewManager.resetOccurences(for: ruleType)
         // when
         for _ in 1...4 {
-            reviewManager.incrementOccurence(for: ruleType)
+            reviewManager.incrementOccurrence(for: ruleType)
         }
         // then
         let count = UserDefaults.standard.value(forKey: ruleType.key) as? Int

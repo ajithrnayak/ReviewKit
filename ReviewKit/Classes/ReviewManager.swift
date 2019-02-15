@@ -62,10 +62,10 @@ public final class ReviewManager {
     
     // MARK: Increment Rule Counter
     
-    /// Use to increment occurence of an app engagment process. Defaults to `1`
+    /// Use to increment occurrence of an app engagment process. Defaults to `1`
     ///
     /// - Parameter ruleType: The type of app engagment rule
-    public func incrementOccurence(for ruleType: RequestReviewRuleType) {
+    public func incrementOccurrence(for ruleType: RequestReviewRuleType) {
         
         let ruleKey = ruleType.key
         
@@ -83,7 +83,7 @@ public final class ReviewManager {
     public func incrementOccurence(for ruleTypes: [RequestReviewRuleType]) {
         
         for ruleType in ruleTypes {
-            incrementOccurence(for: ruleType)
+            incrementOccurrence(for: ruleType)
         }
     }
     
