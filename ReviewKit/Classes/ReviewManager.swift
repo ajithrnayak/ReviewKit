@@ -23,6 +23,18 @@ public struct RequestInterval {
 public enum RequestReviewRuleType {
     case appLaunches
     case customProcess(key: String)
+    
+    
+    /// Key used to uniquely identify each rule.
+    public var key: String {
+        switch self {
+        case .appLaunches:
+            return "RK_APP_LAUNCH_COUNT"
+            
+        case .customProcess(let key):
+            return key
+        }
+    }
 }
 
 /// A Rule consists of it's type information and different request intervals to prompt ratings.
@@ -47,7 +59,6 @@ public final class ReviewManager {
     // MARK: Private
     
     private let userDefaults = UserDefaults.standard
-    private let kAppLaunchCountKey = "RK_APP_LAUNCH_COUNT"
     
     // MARK: Increment Rule Counter
     
@@ -56,7 +67,7 @@ public final class ReviewManager {
     /// - Parameter ruleType: The type of app engagment rule
     public func incrementOccurence(for ruleType: RequestReviewRuleType) {
         
-        let ruleKey = self.ruleKey(for: ruleType)
+        let ruleKey = ruleType.key
         
         //fetch the existing value of key
         let existingValue = userDefaults.value(forKey: ruleKey) as? Int
@@ -82,13 +93,15 @@ public final class ReviewManager {
     ///
     /// - Parameter ruleType: The type of app engagment rule
     public func resetOccurences(for ruleType: RequestReviewRuleType) {
-        
-        switch ruleType {
-        case .appLaunches:
-            userDefaults.removeObject(forKey: kAppLaunchCountKey)
-            
-        case .customProcess(let key):
-            userDefaults.removeObject(forKey: key)
+        userDefaults.removeObject(forKey: ruleType.key)
+    }
+    
+    /// Use the convenience implementation to reset all the recordings of a collection of rule types.
+    ///
+    /// - Parameter ruleTypes: A collection of app engagment rules
+    public func resetOccurrences(for ruleTypes: [RequestReviewRuleType]) {
+        for ruleType in ruleTypes {
+            resetOccurences(for: ruleType)
         }
     }
 
@@ -101,8 +114,8 @@ public final class ReviewManager {
     /// - Parameter rule: A request review rule to prompt.
     public func requestReview(for rule: RequestReviewRule) {
         
-        let ruleType = rule.ruleType
-        let ruleKey = self.ruleKey(for: ruleType)
+        let ruleType    = rule.ruleType
+        let ruleKey     = ruleType.key
         //fetch the existing value of key. If nil, default to 0
         let occurenceCount: Int = userDefaults.value(forKey: ruleKey) as? Int ?? 0
         
@@ -129,14 +142,4 @@ public final class ReviewManager {
         }
     }
     
-    private func ruleKey(for ruleType: RequestReviewRuleType) -> String {
-        
-        switch ruleType {
-        case .appLaunches:
-            return kAppLaunchCountKey
-            
-        case .customProcess(let key):
-            return key
-        }
-    }
 }

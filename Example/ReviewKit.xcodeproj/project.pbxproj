@@ -12,9 +12,9 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		61846E3021F27E59821075E9 /* Pods_ReviewKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 880BE46B3FE3C0680C227D8F /* Pods_ReviewKit_Tests.framework */; };
 		69CE14B5CC017ED71CFF3F3A /* Pods_ReviewKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A340B78194CA3B8DBB72E8 /* Pods_ReviewKit_Example.framework */; };
+		F886D0B02216EC6300ADBD66 /* ReviewManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F886D0AF2216EC6300ADBD66 /* ReviewManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,13 +40,13 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* ReviewKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReviewKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		64A340B78194CA3B8DBB72E8 /* Pods_ReviewKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReviewKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		880BE46B3FE3C0680C227D8F /* Pods_ReviewKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReviewKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A91DA20F4BC566622A2C8E07 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		AF09DD622B67BA9D64126C9D /* ReviewKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ReviewKit.podspec; path = ../ReviewKit.podspec; sourceTree = "<group>"; };
+		A91DA20F4BC566622A2C8E07 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		AF09DD622B67BA9D64126C9D /* ReviewKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ReviewKit.podspec; path = ../ReviewKit.podspec; sourceTree = "<group>"; };
 		B09E3702E545EFFFC31D894C /* Pods-ReviewKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReviewKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReviewKit_Example/Pods-ReviewKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E9D8454C26C22BDD01811818 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E9D8454C26C22BDD01811818 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F886D0AF2216EC6300ADBD66 /* ReviewManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +115,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				F886D0AF2216EC6300ADBD66 /* ReviewManagerTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -343,7 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				F886D0B02216EC6300ADBD66 /* ReviewManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

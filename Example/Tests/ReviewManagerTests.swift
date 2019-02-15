@@ -7,26 +7,72 @@
 //
 
 import XCTest
+@testable import ReviewKit
 
 class ReviewManagerTests: XCTestCase {
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func test1_incrementOccurrenceForAppLaunchSuccessfully() {
+        //given
+        let reviewManager = ReviewManager.default
+        let ruleType = RequestReviewRuleType.appLaunches
+        reviewManager.resetOccurences(for: ruleType)
+        // when
+        reviewManager.incrementOccurence(for: ruleType)
+        // then
+        let count = UserDefaults.standard.value(forKey: ruleType.key) as? Int
+        XCTAssertNotNil(count)
+        XCTAssertEqual(1, count)
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func test2_subsequentIncrementForAppLaunchSuccessfully() {
+        //given
+        let reviewManager = ReviewManager.default
+        let ruleType = RequestReviewRuleType.appLaunches
+        reviewManager.resetOccurences(for: ruleType)
+        // when
+        for _ in 1...4 {
+            reviewManager.incrementOccurence(for: ruleType)
+        }
+        // then
+        let count = UserDefaults.standard.value(forKey: ruleType.key) as? Int
+        XCTAssertNotNil(count)
+        XCTAssertEqual(4, count)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func test3_incrementOccurrenceForCustomProcessSuccessfully() {
+        //given
+        let reviewManager = ReviewManager.default
+        let ruleType = RequestReviewRuleType.customProcess(key: "TASK_COMPLETED")
+        reviewManager.resetOccurences(for: ruleType)
+        // when
+        for _ in 1...4 {
+            reviewManager.incrementOccurence(for: ruleType)
+        }
+        // then
+        let count = UserDefaults.standard.value(forKey: ruleType.key) as? Int
+        XCTAssertNotNil(count)
+        XCTAssertEqual(4, count)
+    }
+    
+    func test4_incrementOccurrenceForMultipleRulesSuccessfully() {
+        //given
+        let reviewManager = ReviewManager.default
+        let ruleType1 = RequestReviewRuleType.customProcess(key: "TASK_COMPLETED")
+        let ruleType2 = RequestReviewRuleType.customProcess(key: "TASK_DELETED")
+        let ruleType3 = RequestReviewRuleType.appLaunches
+        let ruleTypes = [ruleType1,ruleType2, ruleType3]
+        reviewManager.resetOccurrences(for: ruleTypes)
+        //when
+        reviewManager.incrementOccurence(for: ruleTypes)
+        // then
+        for ruleType in ruleTypes {
+            let count = UserDefaults.standard.value(forKey: ruleType.key) as? Int
+            XCTAssertNotNil(count)
+            XCTAssertEqual(1, count)
         }
     }
 
