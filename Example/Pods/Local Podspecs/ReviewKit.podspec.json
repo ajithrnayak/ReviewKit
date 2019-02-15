@@ -1,0 +1,22 @@
+{
+  "name": "ReviewKit",
+  "version": "0.1.0",
+  "summary": "A short description of ReviewKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/ajithrnayak@icloud.com/ReviewKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ajithrnayak@icloud.com": "ajithrnayak@icloud.com"
+  },
+  "source": {
+    "git": "https://github.com/ajithrnayak@icloud.com/ReviewKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ReviewKit/Classes/**/*"
+}

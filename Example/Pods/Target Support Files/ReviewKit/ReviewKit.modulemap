@@ -1,0 +1,6 @@
+framework module ReviewKit {
+  umbrella header "ReviewKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

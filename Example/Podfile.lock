@@ -1,0 +1,16 @@
+PODS:
+  - ReviewKit (0.1.0)
+
+DEPENDENCIES:
+  - ReviewKit (from `../`)
+
+EXTERNAL SOURCES:
+  ReviewKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ReviewKit: 760f540ecec2a508ba857cf13f9d558a3e9e51cc
+
+PODFILE CHECKSUM: 21530693947cce04cb4d9f5368649cf5f55d69f5
+
+COCOAPODS: 1.5.3
