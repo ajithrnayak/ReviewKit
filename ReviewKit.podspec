@@ -38,4 +38,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'StoreKit'
+  s.swift_version = '4.2'
 end

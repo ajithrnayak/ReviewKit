@@ -1,4 +1,5 @@
 use_frameworks!
+platform :ios, '10.3'
 
 target 'ReviewKit_Example' do
   pod 'ReviewKit', :path => '../'
