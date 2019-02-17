@@ -142,8 +142,11 @@ public final class ReviewManager {
         
         let ruleType    = rule.ruleType
         let ruleKey     = ruleType.key
-        //fetch the existing value of key. If nil, default to 0
-        let occurenceCount: Int = userDefaults.value(forKey: ruleKey) as? Int ?? 0
+        
+        //fetch the existing value of key. If nil, exit
+        guard let occurenceCount: Int = userDefaults.value(forKey: ruleKey) as? Int else {
+            return
+        }
         
         let requestInterval = rule.requestInterval
         
