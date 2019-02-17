@@ -15,6 +15,7 @@
 		69CE14B5CC017ED71CFF3F3A /* Pods_ReviewKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A340B78194CA3B8DBB72E8 /* Pods_ReviewKit_Example.framework */; };
 		F886D0B02216EC6300ADBD66 /* ReviewManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F886D0AF2216EC6300ADBD66 /* ReviewManagerTests.swift */; };
 		F8A25E352219E29E00115BD0 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A25E342219E29E00115BD0 /* RulesViewController.swift */; };
+		F8A25E372219FC9200115BD0 /* RuleDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A25E362219FC9200115BD0 /* RuleDetailsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E9D8454C26C22BDD01811818 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F886D0AF2216EC6300ADBD66 /* ReviewManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewManagerTests.swift; sourceTree = "<group>"; };
 		F8A25E342219E29E00115BD0 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		F8A25E362219FC9200115BD0 /* RuleDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleDetailsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				F8A25E342219E29E00115BD0 /* RulesViewController.swift */,
+				F8A25E362219FC9200115BD0 /* RuleDetailsController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -324,6 +327,7 @@
 			files = (
 				F8A25E352219E29E00115BD0 /* RulesViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				F8A25E372219FC9200115BD0 /* RuleDetailsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

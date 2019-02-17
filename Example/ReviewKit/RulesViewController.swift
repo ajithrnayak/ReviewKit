@@ -9,9 +9,10 @@
 import UIKit
 import ReviewKit
 
+typealias Rule = (title: String, ruleInfo: RequestReviewRule)
+
 class RulesViewController: UITableViewController {
 
-    typealias Rule = (title: String, ruleInfo: RequestReviewRule)
     var rules = [Rule]()
     
     override func viewDidLoad() {
@@ -62,6 +63,9 @@ class RulesViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailsVC = storyboard.instantiateViewController(withIdentifier: "RuleDetailsController") as! RuleDetailsController
+        detailsVC.rule = rules[indexPath.row]
+        self.navigationController?.pushViewController(detailsVC, animated: true)
     }
 }
