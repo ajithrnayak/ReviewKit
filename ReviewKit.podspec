@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'ajithrnayak@icloud.com' => 'ajithrnayak@icloud.com' }
-  s.source           = { :git => 'https://github.com/ajithrnayak@icloud.com/ReviewKit.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/ajithrnayak/ReviewKit.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/ajithrnayak'
 
   s.ios.deployment_target = '10.3'
