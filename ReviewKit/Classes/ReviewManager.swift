@@ -10,9 +10,23 @@ import StoreKit
 
 /// To adhere to best practices, the intervals for prompting rating request are divided into three type.
 public struct RequestInterval {
-    let first: Int
-    let second: Int
-    let repeatEvery: Int
+    public let first: Int
+    public let second: Int
+    public let repeatEvery: Int
+    
+    // MARK: Initializers
+
+    /// Use to initialize RequestInterval
+    ///
+    /// - Parameters:
+    ///   - first: The first time the ratings request prompt needs to be shown
+    ///   - second: The second time the ratings request prompt needs to be shown
+    ///   - repeatEvery: The interval that needs to be repeated for requesting for ratings.
+    public init(first: Int, second: Int, repeatEvery: Int) {
+        self.first          = first
+        self.second         = second
+        self.repeatEvery    = repeatEvery
+    }
 }
 
 /// The different rules to determine
@@ -39,8 +53,20 @@ public enum RequestReviewRuleType {
 
 /// A Rule consists of it's type information and different request intervals to prompt ratings.
 public struct RequestReviewRule {
-    let ruleType: RequestReviewRuleType
-    let requestInterval: RequestInterval
+    public let ruleType: RequestReviewRuleType
+    public let requestInterval: RequestInterval
+    
+    // MARK: Initializers
+    
+    /// Use to initialize app engagment rules using `RequestReviewRule`
+    ///
+    /// - Parameters:
+    ///   - ruleType: A `RequestReviewRuleType` case
+    ///   - requestInterval: The different intervals to prompt for ratings.
+    public init(ruleType: RequestReviewRuleType, requestInterval: RequestInterval) {
+        self.ruleType           = ruleType
+        self.requestInterval    = requestInterval
+    }
 }
 
 /// A helper wrapper to easily record different app engagment rules
@@ -50,7 +76,7 @@ public final class ReviewManager {
     // MARK: Shared Accessor
     
     /// A shared instance of ReviewManager
-    static let `default` = ReviewManager()
+    public static let `default` = ReviewManager()
     
     // MARK: Initializer
     
