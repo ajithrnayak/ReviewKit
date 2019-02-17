@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ReviewKit'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of ReviewKit.'
+  s.version          = '1.0.0'
+  s.summary          = 'A helper to quickly integrate rate or review your app request using StoreKit.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+    A helper implementation to easily record different app engagment rules and then prompt request for app ratings and reviews using StoreKit.
                        DESC
 
   s.homepage         = 'https://github.com/ajithrnayak@icloud.com/ReviewKit'
@@ -26,9 +26,9 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'ajithrnayak@icloud.com' => 'ajithrnayak@icloud.com' }
   s.source           = { :git => 'https://github.com/ajithrnayak@icloud.com/ReviewKit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/ajithrnayak'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.3'
 
   s.source_files = 'ReviewKit/Classes/**/*'
   
@@ -37,6 +37,5 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'StoreKit'
 end
