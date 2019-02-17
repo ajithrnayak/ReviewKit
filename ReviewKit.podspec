@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
     A helper implementation to easily record different app engagment rules and then prompt request for app ratings and reviews using StoreKit.
                        DESC
 
-  s.homepage         = 'https://github.com/ajithrnayak@icloud.com/ReviewKit'
+  s.homepage         = 'https://github.com/ajithrnayak/ReviewKit'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'ajithrnayak@icloud.com' => 'ajithrnayak@icloud.com' }
