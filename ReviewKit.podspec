@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ReviewKit'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'A helper to quickly integrate rate or review your app request using StoreKit.'
 
 # This description is used to generate tags and improve search results.
